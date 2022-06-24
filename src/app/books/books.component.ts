@@ -15,6 +15,8 @@ export class BooksComponent implements OnInit {
   author2: string = 'David Thomas';
   src2: string = 'https://m.media-amazon.com/images/I/518FqJvR9aL.jpg';
 
+  isDisabled: boolean = true;
+
   constructor() {}
 
   ngOnInit(): void {}
