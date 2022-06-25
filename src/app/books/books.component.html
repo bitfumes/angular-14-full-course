@@ -1,5 +1,9 @@
 <h2>Programming Books List!</h2>
 <button (click)="handleClick()" [disabled]="isDisabled">Show Books</button>
+
+<input type="text" [(ngModel)]="myName" />
+<div>{{ myName }}</div>
+
 <ul>
     <li>
         <img [src]="src" [alt]="name" width="100" />

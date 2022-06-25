@@ -24,4 +24,6 @@ export class BooksComponent implements OnInit {
   handleClick() {
     this.isDisabled = true;
   }
+
+  myName: string = '';
 }
