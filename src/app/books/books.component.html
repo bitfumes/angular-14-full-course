@@ -1,5 +1,5 @@
 <h2>Programming Books List!</h2>
-<button [disabled]="isDisabled">Show Books</button>
+<button (click)="handleClick()" [disabled]="isDisabled">Show Books</button>
 <ul>
     <li>
         <img [src]="src" [alt]="name" width="100" />
