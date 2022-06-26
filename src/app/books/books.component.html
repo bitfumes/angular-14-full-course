@@ -1,10 +1,11 @@
 <h2>Programming Books List!</h2>
-<button (click)="handleClick()" [disabled]="isDisabled">Show Books</button>
+<button (click)="isShowing = !isShowing">
+    <ng-container *ngIf="!isShowing">Show Books</ng-container>
+    <ng-container *ngIf="isShowing">Hide Books</ng-container>
+</button>
 
-<input type="text" [(ngModel)]="myName" />
-<div>{{ myName }}</div>
 
-<ul>
+<ul *ngIf="isShowing">
     <li>
         <img [src]="src" [alt]="name" width="100" />
         {{ name }} by {{ author }}
