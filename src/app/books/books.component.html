@@ -4,13 +4,13 @@
     <ng-container *ngIf="isShowing">Hide Books</ng-container>
 </button>
 
-
 <ul *ngIf="isShowing">
     <ng-container *ngFor="let book of books; let i=index">
         <li>
             {{ i + 1 }}
             <img [src]="book.image" [alt]="book.name" width="100" />
-            {{ book.name }} by {{ book.author }}
+            {{ book.name | titlecase }} by {{ book.author | titlecase}}
+            <p>{{ book.amount | currency:'INR' }}</p>
         </li>
     </ng-container>
 </ul>
