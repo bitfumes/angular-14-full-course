@@ -3,5 +3,5 @@
     <p class="title">{{ book.name | titlecase }} by {{ book.author |
         titlecase}}</p>
     <p class="currency">{{ book.amount | currency:'INR' }}</p>
-    <button>Add to Card</button>
+    <button (click)="addToCard()">Add to Card</button>
 </li>

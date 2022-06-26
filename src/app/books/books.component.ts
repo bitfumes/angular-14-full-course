@@ -37,6 +37,8 @@ export class BooksComponent implements OnInit {
     },
   ];
 
+  card: Book[] = [];
+
   isShowing: boolean = true;
 
   constructor() {}
