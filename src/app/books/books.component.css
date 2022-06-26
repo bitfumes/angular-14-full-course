@@ -1,0 +1,17 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book {
+    list-style: none;
+    text-overflow: ellipsis;
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+    border:1px solid lightgray;
+    border-radius: 10px;
+}
+.book:hover {
+    border:1px solid black;
+}
