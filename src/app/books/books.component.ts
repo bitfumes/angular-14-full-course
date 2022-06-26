@@ -1,11 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Book {
-  name: string;
-  author: string;
-  image: string;
-  amount: number;
-}
+import { Book } from '../types/Book';
 
 @Component({
   selector: 'app-books',

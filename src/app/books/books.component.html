@@ -1,17 +1,7 @@
 <h2>Programming Books List!</h2>
-<button (click)="isShowing = !isShowing">
-    <ng-container *ngIf="!isShowing">Show Books</ng-container>
-    <ng-container *ngIf="isShowing">Hide Books</ng-container>
-</button>
 
 <ul *ngIf="isShowing">
-    <ng-container *ngFor="let book of books; let i=index">
-        <li class="book">
-            <p class="sno">{{ i + 1 }}</p>
-            <img [src]="book.image" [alt]="book.name" width="100" />
-            <p class="title">{{ book.name | titlecase }} by {{ book.author |
-                titlecase}}</p>
-            <p class="currency">{{ book.amount | currency:'INR' }}</p>
-        </li>
+    <ng-container *ngFor="let singleBook of books; let i=index">
+        <app-book [book]="singleBook"></app-book>
     </ng-container>
 </ul>
