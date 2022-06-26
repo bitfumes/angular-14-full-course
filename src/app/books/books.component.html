@@ -2,7 +2,7 @@
 
 <ul *ngIf="isShowing">
     <ng-container *ngFor="let singleBook of books; let i=index">
-        <app-book (bookEmitter)="addToCard($event)" [book]="singleBook">
+        <app-book [book]="singleBook">
         </app-book>
     </ng-container>
 </ul>

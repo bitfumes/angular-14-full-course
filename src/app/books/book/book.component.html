@@ -3,5 +3,7 @@
     <p class="title">{{ book.name | titlecase }} by {{ book.author |
         titlecase}}</p>
     <p class="currency">{{ book.amount | currency:'INR' }}</p>
-    <button (click)="addToCard()">Add to Card</button>
+    <button *ngIf="!isInCart" (click)="addToCart()">Add to Cart</button>
+    <button *ngIf="isInCart" (click)="removeFromCart()">Remove from
+        Cart</button>
 </li>

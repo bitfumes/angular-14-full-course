@@ -9,18 +9,11 @@ import { BooksService } from './books.service';
 })
 export class BooksComponent implements OnInit {
   books: Book[] = [];
-
   constructor(private booksService: BooksService) {}
-
-  card: Book[] = [];
 
   isShowing: boolean = true;
 
   ngOnInit(): void {
     this.books = this.booksService.getBooks();
-  }
-
-  addToCard(book: Book) {
-    console.log(book);
   }
 }
