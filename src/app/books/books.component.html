@@ -1,8 +1,8 @@
 <h2>Programming Books List!</h2>
 
-<ul *ngIf="isShowing">
+<ul *ngIf="isShowing" class="flex flex-wrap justify-center">
     <ng-container *ngFor="let singleBook of books; let i=index">
-        <app-book [book]="singleBook">
+        <app-book [book]="singleBook" class="w-1/2 p-5 text-center">
         </app-book>
     </ng-container>
 </ul>
