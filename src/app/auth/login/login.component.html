@@ -1,17 +1,19 @@
 <div class="flex justify-center">
-    <form class="p-4 mt-20 rounded-lg border m-auto w-1/3">
+    <form (ngSubmit)="submit()"
+        class="p-4 mt-20 rounded-lg border m-auto w-1/3">
         <h1 class="text-center text-xl">Login</h1>
         <div class="my-5 w-full">
             <label for="email">Email</label>
             <input type="email" id="email"
                 class="p-2 rounded w-full border text-sm"
-                placeholder="Email Address">
+                placeholder="Email Address" [(ngModel)]="form.email"
+                name="email">
         </div>
         <div class="my-5 w-full">
             <label for="password">Password</label>
             <input type="password" id="password"
-                class="p-2 rounded w-full border text-sm"
-                placeholder="Password">
+                class="p-2 rounded w-full border text-sm" placeholder="Password"
+                [(ngModel)]="form.password" name="password">
         </div>
         <div class="my-5 w-full">
             <input type="submit"
