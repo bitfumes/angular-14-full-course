@@ -19,7 +19,7 @@
             <input type="password" id="password"
                 class="p-2 rounded w-full border text-sm" placeholder="Password"
                 [(ngModel)]="form.password" name="password" #password="ngModel"
-                required>>
+                required>
         </div>
         <div *ngIf="password.invalid && (password.dirty || password.touched)"
             class="p-2 bg-red-300 text-red-800 rounded">
